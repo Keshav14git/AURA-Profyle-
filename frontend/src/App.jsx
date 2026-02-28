@@ -1,3 +1,5 @@
+
+
 function App() {
   return (
     <div className="min-h-screen bg-aura-bg text-aura-text flex flex-col font-sans">
@@ -19,15 +21,6 @@ function App() {
             Authorized Unified Representation Assistant, designed to communicate with clarity, accuracy, and executive-level maturity.
           </p>
         </div>
-
-        {/* Primary Action Button */}
-        <button className="mt-8 px-8 py-4 rounded-full bg-aura-surface border border-aura-border hover:bg-aura-border/30 transition-all shadow-lg text-aura-text text-lg font-semibold flex items-center gap-3">
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-aura-border opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-400"></span>
-          </span>
-          Start Conversation
-        </button>
       </main>
     </div>
   )
