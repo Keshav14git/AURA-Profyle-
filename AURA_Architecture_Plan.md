@@ -15,8 +15,8 @@ This document details the architectural setup for the AURA (Authorized Unified R
 3.  **LLM Engine:** Groq (Llama 3 8B or 70B)
     *   **Why:** Groq provides the fastest LLM inference available globally (Language Processing Unit). For a voice assistant, lowering latency below 500ms is essential to avoid awkward, robotic pauses. Their free tier is extremely generous.
 
-4.  **Database & Authentication:** Supabase (PostgreSQL)
-    *   **Why:** Free tier provides 500MB of cloud Postgres and out-of-the-box user authentication. It will serve as the secure vault for the executive persona instructions and knowledge.
+4.  **Database & Authentication:** Neon (Serverless PostgreSQL) + Clerk or JWT
+    *   **Why:** Since AURA is a SaaS platform serving thousands of individual executives, we need a robust, relational database. Neon separates storage and compute, scaling perfectly to zero when not used, and supports `pgvector` for advanced AI memory. clerk can handle multi-tenant authentication seamlessly.
 
 ## Folder Structure
 
